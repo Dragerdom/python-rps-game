@@ -4,10 +4,12 @@
 
 import random
 
-user_action = input("Enter throw (rock, paper, scissors): ")
-ai_action = random.choice(["rock", "paper", "scissors"])
-
-print(f"\nYou chose {user_action}, AI chose {ai_action}.\n")
+while True:
+	user_action = input("Enter throw (rock, paper, scissors, 0 to quit): ")
+	ai_action = random.choice(["rock", "paper", "scissors"])
+	if  user_action == 0:
+		break
+	print(f"\nYou chose {user_action}, AI chose {ai_action}.\n")
 
 if user_action == ai_action:
     print(f"Both players selected {user_action}. It's a tie!")
